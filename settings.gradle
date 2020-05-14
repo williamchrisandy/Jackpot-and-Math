@@ -1,0 +1,2 @@
+rootProject.name='M-OOP Final Project'
+include ':app'
