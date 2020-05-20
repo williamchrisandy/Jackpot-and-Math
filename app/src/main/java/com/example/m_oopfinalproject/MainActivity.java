@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void toTube(View view) {
-        Intent intent = new Intent(this, Tube_calculatorActivity.class);
+        Intent intent = new Intent(this, Tube_calculatorActivitv2.class);
         startActivity(intent);
     }
 //    public void to(View view) {

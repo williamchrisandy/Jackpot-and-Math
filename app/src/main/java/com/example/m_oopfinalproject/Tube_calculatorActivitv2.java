@@ -2,12 +2,13 @@ package com.example.m_oopfinalproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class Tube_calculatorActivity extends AppCompatActivity {
+public class Tube_calculatorActivitv2 extends AppCompatActivity {
 
     EditText txtHeight;
     EditText txtRadius;
@@ -20,6 +21,7 @@ public class Tube_calculatorActivity extends AppCompatActivity {
         txtHeight = findViewById(R.id.txtHeight);
         txtRadius = findViewById(R.id.txtRadius);
         txtResult = findViewById(R.id.txtResult);
+
     }
 
     public  void  calculate (View view){
