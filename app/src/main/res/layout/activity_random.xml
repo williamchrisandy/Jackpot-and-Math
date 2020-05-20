@@ -109,6 +109,7 @@
             android:hint="If there is warning, will be printed here"
             />
 
+
     </LinearLayout>
 
 </LinearLayout>

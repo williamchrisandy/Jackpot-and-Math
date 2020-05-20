@@ -16,6 +16,5 @@ public class RandomActivity extends AppCompatActivity {
 
     public void toHome(View view){
         Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
     }
 }
