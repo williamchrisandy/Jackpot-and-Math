@@ -58,6 +58,7 @@
             android:layout_height="wrap_content"
             android:hint="Input num 1"
             android:layout_marginLeft="70dp"
+            android:inputType="number"
             />
 
         <EditText
@@ -66,6 +67,7 @@
             android:layout_height="wrap_content"
             android:hint="Input num 2"
             android:layout_marginLeft="60dp"
+            android:inputType="number"
             />
 
 

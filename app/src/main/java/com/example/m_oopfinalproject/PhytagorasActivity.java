@@ -32,8 +32,17 @@ public class    PhytagorasActivity extends AppCompatActivity {
     }
 
     public void calculateA(View view){
-        double number1 = Double.parseDouble(num1.getText().toString());
-        double number2 = Double.parseDouble(num2.getText().toString());
+        double number1 = 0;
+        double number2 = 0;
+        try {
+             number1 = Double.parseDouble(num1.getText().toString());
+             number2 = Double.parseDouble(num2.getText().toString());
+        }catch (Exception e){
+            String result = "Must input a number";
+            Result.setText(result);
+            return;
+        }
+
 
         if(number1 > number2){
             double c = number1;
@@ -57,8 +66,16 @@ public class    PhytagorasActivity extends AppCompatActivity {
     }
 
     public void calculateB(View view){
-        double number1 = Double.parseDouble(num1.getText().toString());
-        double number2 = Double.parseDouble(num2.getText().toString());
+        double number1 = 0;
+        double number2 = 0;
+        try {
+            number1 = Double.parseDouble(num1.getText().toString());
+            number2 = Double.parseDouble(num2.getText().toString());
+        }catch (Exception e){
+            String result = "Must input a number";
+            Result.setText(result);
+            return;
+        }
 
         if(number1 > number2){
             double c = number1;
@@ -82,8 +99,16 @@ public class    PhytagorasActivity extends AppCompatActivity {
     }
 
     public void calculateC(View view){
-        double number1 = Double.parseDouble(num1.getText().toString());
-        double number2 = Double.parseDouble(num2.getText().toString());
+        double number1 = 0;
+        double number2 = 0;
+        try {
+            number1 = Double.parseDouble(num1.getText().toString());
+            number2 = Double.parseDouble(num2.getText().toString());
+        }catch (Exception e){
+            String result = "Must input a number";
+            Result.setText(result);
+            return;
+        }
 
 
             double a = number1;
