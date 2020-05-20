@@ -6,7 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import java.util.Random;
+
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,5 +29,13 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, QuadraticActivity.class);
         startActivity(intent);
     }
+    public void toTube(View view) {
+        Intent intent = new Intent(this, Tube_calculatorActivity.class);
+        startActivity(intent);
+    }
+//    public void to(View view) {
+//        Intent intent = new Intent(this, .class);
+//        startActivity(intent);
+//    }
 
 }

@@ -39,6 +39,7 @@
             android:onClick="toRandom"/>
 
         <Button
+            android:id="@+id/phytagorasBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Phytagoras Calculator"
@@ -49,6 +50,12 @@
             android:layout_height="wrap_content"
             android:text="Quadratic Factor Calculator"
             android:onClick="toQuadratic"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tube Calculator"
+            android:onClick="toTube"/>
 
     </LinearLayout>
 

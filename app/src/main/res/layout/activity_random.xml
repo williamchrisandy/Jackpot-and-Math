@@ -35,6 +35,7 @@
         android:layout_height="wrap_content">
 
         <EditText
+            android:id="@+id/inputName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter Your Name"
@@ -53,7 +54,7 @@
         android:layout_marginTop="20dp">
 
         <EditText
-            android:id="@+id/startNumber"
+            android:id="@+id/inputStart"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -63,7 +64,7 @@
             android:inputType="number"/>
 
         <EditText
-            android:id="@+id/stopNumber"
+            android:id="@+id/inputStop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -82,31 +83,24 @@
         android:layout_marginTop="30dp">
 
         <Button
-            android:id="@+id/generateBtn"
+            android:id="@+id/btnGenerate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Generate"
             android:gravity="center"
             android:layout_marginTop="30dp"
+            android:onClick="generate"
             />
 
 
 
         <TextView
-            android:id="@+id/rngResult"
+            android:id="@+id/result"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:textAlignment="center"
             android:hint="Result is printed here"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:textAlignment="center"
-            android:hint="If there is warning, will be printed here"
             />
 
 
