@@ -51,6 +51,12 @@
             android:text="Quadratic Factor Calculator"
             android:onClick="toQuadratic"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tube Calculator"
+            android:onClick="toTube"/>
+
     </LinearLayout>
 
 
