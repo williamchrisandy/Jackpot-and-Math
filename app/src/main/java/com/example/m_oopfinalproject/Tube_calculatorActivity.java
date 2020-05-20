@@ -16,7 +16,7 @@ public class Tube_calculatorActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quadratic);
+        setContentView(R.layout.activity_tubecalculator);
         txtHeight = findViewById(R.id.txtHeight);
         txtRadius = findViewById(R.id.txtRadius);
         txtResult = findViewById(R.id.txtResult);
@@ -30,7 +30,7 @@ public class Tube_calculatorActivity extends AppCompatActivity {
 
         float hasil = (float) (3.14 * jarijari * jarijari * height);
 
-        String jawaban = "" + hasil;
+        String jawaban = "" + hasil + " cm^3";
         txtResult.setText(jawaban);
 
     }
