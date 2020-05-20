@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class    PhytagorasActivity extends AppCompatActivity {
+public class PhytagorasActivity extends AppCompatActivity {
 
     EditText num1, num2;
     TextView Result;
