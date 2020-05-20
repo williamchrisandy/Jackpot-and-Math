@@ -101,7 +101,7 @@
             />
 
         <Button
-            android:id="@+id/countA"
+            android:id="@+id/countB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="B"
@@ -110,7 +110,7 @@
             />
 
         <Button
-            android:id="@+id/countA"
+            android:id="@+id/countC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="C"
