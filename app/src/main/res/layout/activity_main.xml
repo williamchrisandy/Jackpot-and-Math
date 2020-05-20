@@ -38,9 +38,12 @@
             android:text="Name and Number Concatenator"/>
 
         <Button
+            android:id="@+id/phytagorasBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Phytagoras Calculator"/>
+            android:text="Phytagoras Calculator"
+            android:onClick="phytagorasButton"/>
+
 
         <Button
             android:layout_width="match_parent"

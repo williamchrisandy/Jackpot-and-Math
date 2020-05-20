@@ -4,14 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".PhytagorasActivity"
     android:orientation="vertical"
     >
 
     <Button
+        android:id="@+id/backBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Back"
+        android:onClick="backButton"
         />
 
     <TextView
@@ -42,7 +44,7 @@
         android:layout_height="351dp"
         android:layout_gravity="center"
         android:layout_weight="1"
-        app:srcCompat="@drawable/Segitiga" />
+        app:srcCompat="@drawable/segitiga" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -98,6 +100,7 @@
             android:text="A"
             android:textSize="20sp"
             android:layout_marginLeft="30dp"
+            android:onClick="calculateA"
             />
 
         <Button
@@ -107,6 +110,7 @@
             android:text="B"
             android:textSize="20sp"
             android:layout_marginLeft="40dp"
+            android:onClick="calculateB"
             />
 
         <Button
@@ -116,6 +120,7 @@
             android:text="C"
             android:textSize="20sp"
             android:layout_marginLeft="50dp"
+            android:onClick="calculateC"
             />
 
     </LinearLayout>
@@ -131,7 +136,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Result"
         android:textSize="25sp" />
 
     <TextView
