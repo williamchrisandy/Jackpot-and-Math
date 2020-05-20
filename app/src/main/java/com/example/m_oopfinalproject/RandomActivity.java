@@ -48,7 +48,6 @@ public class RandomActivity extends AppCompatActivity {
             result.setText(sResult);
             return;
         }
-
         try {
             sStart = Integer.parseInt(start.getText().toString());
             sStop = Integer.parseInt(stop.getText().toString());
@@ -57,7 +56,6 @@ public class RandomActivity extends AppCompatActivity {
             result.setText(sResult);
             return;
         }
-
         if(sStart>sStop){
             sResult = "Start range must be smaller than stop range!";
             result.setText(sResult);
