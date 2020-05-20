@@ -42,7 +42,7 @@
         android:layout_height="351dp"
         android:layout_gravity="center"
         android:layout_weight="1"
-        app:srcCompat="@drawable/Segitiga" />
+        app:srcCompat="@drawable/segitiga" />
 
     <LinearLayout
         android:layout_width="wrap_content"

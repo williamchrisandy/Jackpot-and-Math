@@ -35,17 +35,20 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Concatenator"/>
+            android:text="Concatenator"
+            android:onClick="toRandom"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Phytagoras Calculator" />
+            android:text="Phytagoras Calculator"
+            android:onClick="toPhytagoras"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Quadratic Factor Calculator"/>
+            android:text="Quadratic Factor Calculator"
+            android:onClick="toQuadratic"/>
 
     </LinearLayout>
 
