@@ -49,9 +49,10 @@
         app:srcCompat="@drawable/segitiga" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:gravity="center_horizontal"
         >
 
         <EditText
@@ -59,8 +60,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Input num 1"
-            android:layout_marginLeft="70dp"
             android:inputType="number"
+            android:layout_marginRight="20dp"
             />
 
         <EditText
@@ -68,8 +69,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Input num 2"
-            android:layout_marginLeft="60dp"
             android:inputType="number"
+            android:layout_marginLeft="20dp"
             />
 
 
@@ -93,10 +94,10 @@
         />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        >
+        android:gravity="center">
 
         <Button
             android:id="@+id/countA"
@@ -104,7 +105,6 @@
             android:layout_height="wrap_content"
             android:text="A"
             android:textSize="20sp"
-            android:layout_marginLeft="30dp"
             android:onClick="calculateA"
             />
 
@@ -113,8 +113,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="B"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:textSize="20sp"
-            android:layout_marginLeft="40dp"
             android:onClick="calculateB"
             />
 
@@ -124,7 +125,6 @@
             android:layout_height="wrap_content"
             android:text="C"
             android:textSize="20sp"
-            android:layout_marginLeft="50dp"
             android:onClick="calculateC"
             />
 
