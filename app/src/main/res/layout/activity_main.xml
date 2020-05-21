@@ -30,37 +30,41 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_weight="2">
+        android:layout_weight="2"
+        android:gravity="center_horizontal">
 
         <Button
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="Concatenator"
             android:onClick="toRandom"/>
 
         <Button
-            android:id="@+id/phytagorasBtn"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="Phytagoras Calculator"
+            android:layout_marginTop="10dp"
             android:onClick="toPhytagoras"/>
 
         <Button
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="Quadratic Factor Calculator"
+            android:layout_marginTop="10dp"
             android:onClick="toQuadratic"/>
 
         <Button
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="Tube Calculator"
+            android:layout_marginTop="10dp"
             android:onClick="toTube"/>
 
         <Button
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="Jackpot GBK"
+            android:layout_marginTop="10dp"
             android:onClick="toJackpotGBK"/>
 
     </LinearLayout>
