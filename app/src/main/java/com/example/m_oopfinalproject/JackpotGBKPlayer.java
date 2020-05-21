@@ -42,9 +42,8 @@ public class JackpotGBKPlayer {
         score += n;
         return score;
     }
-    public int pushMove(char move){
+    public void pushMove(char move){
         pendingMoves.add(move);
-        return pendingMoves.size();
     }
     public char popMove(){
         if (pendingMoves.size() == 0) return 'u';

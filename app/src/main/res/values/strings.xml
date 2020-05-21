@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">M-OOP Final Project</string>
+    <string name="jackpotgbk_button_start">Start/Stop</string>
+    <string name="jackpotgbk_button_stop">Stop</string>
 </resources>
