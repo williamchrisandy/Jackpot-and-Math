@@ -12,7 +12,7 @@ import android.widget.TextView;
 public class PhytagorasActivity extends AppCompatActivity {
 
     EditText num1, num2;
-    TextView Result;
+    TextView Result, triangleAtt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,8 @@ public class PhytagorasActivity extends AppCompatActivity {
         num2 = findViewById(R.id.num2);
         Result = findViewById(R.id.Result);
         Result.setTextColor(Color.parseColor("#FF0000"));
+        triangleAtt = findViewById(R.id.triangleAtt);
+        triangleAtt.setTextColor(Color.parseColor("#000000"));
     }
 
     public void backButton(View view){
@@ -49,15 +51,27 @@ public class PhytagorasActivity extends AppCompatActivity {
             double b = number2;
             double power = (c*c)-(b*b);
             double res = Math.sqrt(power);
-            String result = Double.toString(res);
+            String result = "A = " + Double.toString(res);
             Result.setText(result);
+            double area = (res*b)/2;
+            double perimeter = res+b+c;
+            String attribute = "    Triangle Attribute :\n    Area           = "
+                    + area + "\n    Perimeter = " + perimeter;
+            triangleAtt.setText(attribute);
+
         }else if (number1 < number2){
             double b = number1;
             double c = number2;
             double power = (c*c)-(b*b);
             double res = Math.sqrt(power);
-            String result = Double.toString(res);
+            String result = "A = " + Double.toString(res);
             Result.setText(result);
+            double area = (res*b)/2;
+            double perimeter = res+b+c;
+            String attribute = "    Triangle Attribute :\n    Area           = "
+                    + area + "\n    Perimeter = " + perimeter;
+            triangleAtt.setText(attribute);
+
         }else {
             String result = "Number cannot be the same";
             Result.setText(result);
@@ -82,15 +96,25 @@ public class PhytagorasActivity extends AppCompatActivity {
             double a = number2;
             double power = (c*c)-(a*a);
             double res = Math.sqrt(power);
-            String result = Double.toString(res);
+            String result = "B = " + Double.toString(res);
             Result.setText(result);
+            double area = (res*a)/2;
+            double perimeter = res+a+c;
+            String attribute = "    Triangle Attribute :\n    Area           = "
+                    + area + "\n    Perimeter = " + perimeter;
+            triangleAtt.setText(attribute);
         }else if (number1 < number2){
             double a = number1;
             double c = number2;
             double power = (c*c)-(a*a);
             double res = Math.sqrt(power);
-            String result = Double.toString(res);
+            String result = "B = " + Double.toString(res);
             Result.setText(result);
+            double area = (a*res)/2;
+            double perimeter = a+res+c;
+            String attribute = "    Triangle Attribute :\n    Area           = "
+                    + area + "\n    Perimeter = " + perimeter;
+            triangleAtt.setText(attribute);
         }else {
             String result = "Number cannot be the same";
             Result.setText(result);
@@ -115,8 +139,13 @@ public class PhytagorasActivity extends AppCompatActivity {
             double b = number2;
             double power = (a*a)+(b*b);
             double res = Math.sqrt(power);
-            String result = Double.toString(res);
+            String result = "C = " + Double.toString(res);
             Result.setText(result);
+            double area = (a*b)/2;
+            double perimeter = a+b+res;
+            String attribute = "    Triangle Attribute :\n    Area           = " + area
+                    + "\n    Perimeter = " + perimeter;
+            triangleAtt.setText(attribute);
 
     }
 
