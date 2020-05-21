@@ -33,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Tube_calculatorActivitv2.class);
         startActivity(intent);
     }
+    public void toJackpotGBK(View view) {
+        Intent intent = new Intent(this, JackpotGBKActivity.class);
+        startActivity(intent);
+    }
 //    public void to(View view) {
 //        Intent intent = new Intent(this, .class);
 //        startActivity(intent);
