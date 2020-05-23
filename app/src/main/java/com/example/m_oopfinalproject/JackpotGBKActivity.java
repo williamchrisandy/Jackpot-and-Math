@@ -31,6 +31,8 @@ public class JackpotGBKActivity extends AppCompatActivity {
     // Handler utilities
     private Handler player1Handler = new Handler();
     private Handler player2Handler = new Handler();
+
+    // A Runnable for randomizing items in Player 1
     private Runnable player1Updater = new Runnable(){
         @Override
         public void run(){
@@ -47,6 +49,8 @@ public class JackpotGBKActivity extends AppCompatActivity {
             }
         }
     };
+
+    // A Runnable for randomizing items in Player 2
     private Runnable player2Updater = new Runnable(){
         @Override
         public void run(){
@@ -118,6 +122,8 @@ public class JackpotGBKActivity extends AppCompatActivity {
         for (char move : players[1].getPendingMoves()) res.append(resolveStateSymbol(move, false));
         temp.setText(Html.fromHtml(res.toString()));
     }
+
+    // Update player's slot views
     private void updateSlotViews(int player){
         TextView temp;
         StringBuilder res = new StringBuilder();;
@@ -221,6 +227,10 @@ public class JackpotGBKActivity extends AppCompatActivity {
         char player1Move, player2Move;
         int res;
         while (players[0].getPendingMoves().size() > 0 && players[1].getPendingMoves().size() > 0){
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+            }
             player1Move = players[0].popMove();
             player2Move = players[1].popMove();
             res = whichWins(player1Move, player2Move);
@@ -242,7 +252,7 @@ public class JackpotGBKActivity extends AppCompatActivity {
     int whichWins(char player1, char player2){
         if (!isValid(player1) || !isValid(player2)) return -1;
         // If both players have the same state, then no winners are awarded.
-        else if (player1 == player2) return 0;
+        if (player1 == player2) return 0;
         // The non-NULL player wins over a NULL player.
         // *NULL refers to the player's movement state.
         else if (player2 == 'n') return 1;
