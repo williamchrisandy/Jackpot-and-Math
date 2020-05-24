@@ -24,11 +24,28 @@ public class Tube_calculatorActivitv2 extends AppCompatActivity {
 
     }
 
-    public  void  calculate (View view){
+    public  void  backButton (View view){
+        Intent intentBack = new Intent(this, MainActivity.class);
+        startActivity(intentBack);
+    }
 
-        float height = Float.parseFloat(txtHeight.getText().toString());
-        float radius = Float.parseFloat(txtRadius.getText().toString());
-        float jarijari = radius/2;
+    public  void  calculate (View view){
+        String text;
+        float height = 0;
+        float radius = 0;
+        float jarijari = 0;
+        try {
+            height = Float.parseFloat(txtHeight.getText().toString());
+            radius = Float.parseFloat(txtRadius.getText().toString());
+            jarijari = radius/2;
+        }catch (Exception e){
+            text = "Please input number";
+            txtResult.setText(text);
+            return;
+        }
+
+
+
 
         float hasil = (float) (3.14 * jarijari * jarijari * height);
 
