@@ -33,11 +33,11 @@ public class Tube_calculatorActivitv2 extends AppCompatActivity {
         String text;
         float height = 0;
         float radius = 0;
-        float jarijari = 0;
+
         try {
             height = Float.parseFloat(txtHeight.getText().toString());
             radius = Float.parseFloat(txtRadius.getText().toString());
-            jarijari = radius/2;
+
         }catch (Exception e){
             text = "Please input number";
             txtResult.setText(text);
@@ -47,7 +47,7 @@ public class Tube_calculatorActivitv2 extends AppCompatActivity {
 
 
 
-        float hasil = (float) (3.14 * jarijari * jarijari * height);
+        float hasil = (float) (Math.PI * radius * radius* height);
 
         String jawaban = "" + hasil + " cm^3";
         txtResult.setText(jawaban);
