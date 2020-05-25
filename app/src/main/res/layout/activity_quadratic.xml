@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:visibility="visible"
-    tools:context=".MainActivity">
+    tools:context=".QuadraticActivity">
 
     <Button
+        android:id="@+id/q2fc_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Back"
-        />
+        android:layout_alignParentStart="true"
+        android:onClick="q2fcBack"
+    />
 
     <TextView
         android:id="@+id/q2fc_title"
+        android:layout_below="@id/q2fc_back"
+        android:layout_centerHorizontal="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50sp"
@@ -26,127 +31,18 @@
         android:layout_marginRight="10sp"
         android:layout_marginBottom="10sp"
         android:textAlignment="center"
-        android:textAllCaps="false"
         android:textColor="@android:color/black"
-        android:textSize="36sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         android:text="Quadratic Formula\nFactor Calculator\n(QF2C)"
-        />
+    />
 
     <TextView
         android:id="@+id/q2fc_general_formula"
+        android:layout_below="@id/q2fc_title"
+        android:layout_centerHorizontal="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10sp"
-        android:layout_marginStart="10sp"
-        android:layout_marginLeft="10sp"
-        android:layout_marginTop="10sp"
-        android:layout_marginEnd="10sp"
-        android:layout_marginRight="10sp"
-        android:layout_marginBottom="10sp"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="30sp"
-        android:textStyle="italic"
-        android:text="ax^2 + bx + c = 0"
-        />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20sp"
-        android:layout_marginRight="20sp"
-        android:orientation="horizontal"
-        >
-
-        <EditText
-            android:id="@+id/q2fc_a"
-            android:layout_width="wrap_content"
-            android:layout_weight="1"
-            android:layout_height="50sp"
-            android:layout_margin="10sp"
-            android:layout_marginStart="10sp"
-            android:layout_marginLeft="10sp"
-            android:layout_marginTop="10sp"
-            android:layout_marginEnd="10sp"
-            android:layout_marginRight="10sp"
-            android:layout_marginBottom="10sp"
-            android:textAlignment="center"
-            android:maxLength="5"
-            android:hint="a"
-            />
-
-        <EditText
-            android:id="@+id/q2fc_b"
-            android:layout_width="wrap_content"
-            android:layout_weight="1"
-            android:layout_height="50sp"
-            android:layout_margin="10sp"
-            android:layout_marginStart="10sp"
-            android:layout_marginLeft="10sp"
-            android:layout_marginTop="10sp"
-            android:layout_marginEnd="10sp"
-            android:layout_marginRight="10sp"
-            android:layout_marginBottom="10sp"
-            android:textAlignment="center"
-            android:maxLength="5"
-            android:hint="b"
-            />
-
-        <EditText
-            android:id="@+id/q2fc_c"
-            android:layout_width="wrap_content"
-            android:layout_weight="1"
-            android:layout_height="50sp"
-            android:layout_margin="10sp"
-            android:layout_marginStart="10sp"
-            android:layout_marginLeft="10sp"
-            android:layout_marginTop="10sp"
-            android:layout_marginEnd="10sp"
-            android:layout_marginRight="10sp"
-            android:layout_marginBottom="10sp"
-            android:textAlignment="center"
-            android:maxLength="5"
-            android:hint="c"
-            />
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/q2fc_calculate_button"
-        android:layout_width="match_parent"
-        android:layout_height="50sp"
-        android:layout_margin="10sp"
-        android:layout_marginStart="10sp"
-        android:layout_marginLeft="10sp"
-        android:layout_marginTop="10sp"
-        android:layout_marginEnd="10sp"
-        android:layout_marginRight="10sp"
-        android:layout_marginBottom="10sp"
-        android:textSize="16sp"
-        android:text="Calculate"
-        />
-
-    <TextView
-        android:id="@+id/q2fc_calculate_result"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10sp"
-        android:layout_marginStart="10sp"
-        android:layout_marginLeft="10sp"
-        android:layout_marginTop="10sp"
-        android:layout_marginRight="10sp"
-        android:layout_marginBottom="10sp"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="30sp"
-        android:text="Result"
-        />
-
-    <TextView
-        android:id="@+id/q2fc_calculate_result_output"
-        android:layout_width="match_parent"
-        android:layout_height="200sp"
         android:layout_margin="10sp"
         android:layout_marginStart="10sp"
         android:layout_marginLeft="10sp"
@@ -157,7 +53,122 @@
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="20sp"
-        android:hint="Result will be showed here"
-        />
+        android:textStyle="italic"
+        android:text="f(x) = ax^2 + bx + c"
+    />
 
-</LinearLayout>
+    <EditText
+        android:id="@+id/q2fc_a"
+        android:layout_below="@id/q2fc_general_formula"
+        android:layout_alignParentStart="true"
+        android:minWidth="100sp"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+        android:layout_margin="10sp"
+        android:layout_marginStart="10sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginEnd="10sp"
+        android:layout_marginRight="10sp"
+        android:layout_marginBottom="10sp"
+        android:textAlignment="center"
+        android:maxLength="5"
+        android:hint="a"
+        android:inputType="numberSigned"
+    />
+
+    <EditText
+        android:id="@+id/q2fc_b"
+        android:layout_below="@id/q2fc_general_formula"
+        android:layout_centerHorizontal="true"
+        android:minWidth="100sp"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+        android:layout_margin="10sp"
+        android:layout_marginStart="10sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginEnd="10sp"
+        android:layout_marginRight="10sp"
+        android:layout_marginBottom="10sp"
+        android:textAlignment="center"
+        android:maxLength="5"
+        android:hint="b"
+        android:inputType="numberSigned"
+    />
+
+    <EditText
+        android:id="@+id/q2fc_c"
+        android:layout_below="@id/q2fc_general_formula"
+        android:layout_alignParentEnd="true"
+        android:minWidth="100sp"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+        android:layout_margin="10sp"
+        android:layout_marginStart="10sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginEnd="10sp"
+        android:layout_marginRight="10sp"
+        android:layout_marginBottom="10sp"
+        android:textAlignment="center"
+        android:maxLength="5"
+        android:hint="c"
+        android:inputType="numberSigned"
+    />
+
+    <Button
+        android:id="@+id/q2fc_calculate_button"
+        android:layout_below="@id/q2fc_a"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+        android:layout_margin="10sp"
+        android:layout_marginStart="10sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginEnd="10sp"
+        android:layout_marginRight="10sp"
+        android:layout_marginBottom="10sp"
+        android:textSize="16sp"
+        android:text="Calculate"
+        android:onClick="q2fcCalculate"
+    />
+
+    <TextView
+        android:id="@+id/q2fc_calculate_result"
+        android:layout_below="@id/q2fc_calculate_button"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:layout_marginStart="10sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginRight="10sp"
+        android:layout_marginBottom="10sp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:text="Result"
+    />
+
+    <TextView
+        android:id="@+id/q2fc_calculate_result_output"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/q2fc_calculate_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:layout_marginStart="10sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginEnd="10sp"
+        android:layout_marginRight="10sp"
+        android:layout_marginBottom="10sp"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:hint="Result will be showed here"
+    />
+
+</RelativeLayout>
