@@ -44,7 +44,7 @@ public class QuadraticActivity extends AppCompatActivity
         if(D==0) resultString += "- Kurva menyinggung sumbu x di titik puncak kurva: (" + (((-b)/(2.00*a)) - (int) ((-b)/(2.00*a)) == 0? (int) ((-b)/(2.00*a)) : decimalFormat.format((-b)/(2.00*a))) + " ,0)\n";
         else
         {
-            if(D<0) resultString += "- Kurva tidak memotong atau menyinggung sumbu-x\n";
+            if(D<0) resultString += "- Kurva tidak memotong atau menyinggung sumbu x\n";
             else resultString += "- Kurva memotong sumbu x di titik (" + (((-b) / (2.00 * a) + Math.sqrt(D) / (2.00 * a)) - (int) ((-b) / (2.00 * a) + Math.sqrt(D) / (2.00 * a)) == 0? (int) ((-b) / (2.00 * a) + Math.sqrt(D) / (2.00 * a)) : decimalFormat.format((-b) / (2.00 * a) + Math.sqrt(D) / (2.00 * a))) + ",0) dan (" + (((-b) / (2.00 * a) - Math.sqrt(D) / (2.00 * a)) - (int) ((-b) / (2.00 * a) - Math.sqrt(D) / (2.00 * a)) == 0? (int) ((-b) / (2.00 * a) - Math.sqrt(D) / (2.00 * a)) : decimalFormat.format((-b) / (2.00 * a) - Math.sqrt(D) / (2.00 * a))) + ",0)\n";
             resultString += "- Titik puncak kurva berada di titik (" + (((-b)/(2.00*a)) - (int) ((-b)/(2.00*a)) == 0? (int) ((-b)/(2.00*a)) : decimalFormat.format((-b)/(2.00*a))) + "," + (((-D)/(4.00*a)) - (int) ((-D)/(4.00*a)) == 0? (int) ((-D)/(4.00*a)) : decimalFormat.format((-D)/(4.00*a))) + ")\n";
         }
