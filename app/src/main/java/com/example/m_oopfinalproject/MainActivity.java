@@ -37,9 +37,5 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, JackpotGBKActivity.class);
         startActivity(intent);
     }
-//    public void to(View view) {
-//        Intent intent = new Intent(this, .class);
-//        startActivity(intent);
-//    }
 
 }
