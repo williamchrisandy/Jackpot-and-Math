@@ -20,7 +20,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tube Volume Talculator"
+            android:text="Tube Volume Calculator"
+            android:textColor="#000000"
             android:textSize="26sp"
             android:layout_gravity="center"
             android:layout_marginTop="40px"/>
@@ -49,6 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Calculate"
+            android:textColor="#000000"
             android:onClick="calculate"
             android:layout_marginTop="40px"
             />

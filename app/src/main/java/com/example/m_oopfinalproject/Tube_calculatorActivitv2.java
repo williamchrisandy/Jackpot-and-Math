@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 public class Tube_calculatorActivitv2 extends AppCompatActivity {
 
     EditText txtHeight;
@@ -47,9 +49,12 @@ public class Tube_calculatorActivitv2 extends AppCompatActivity {
 
 
 
-        float hasil = (float) (Math.PI * radius * radius* height);
+        double hasil = (double) (Math.PI * radius * radius* height);
+        DecimalFormat df = new DecimalFormat("0.00");
 
-        String jawaban = "" + hasil + " cm^3";
+
+
+        String jawaban = "" + df.format(hasil)+ " cm^3";
         txtResult.setText(jawaban);
 
     }
