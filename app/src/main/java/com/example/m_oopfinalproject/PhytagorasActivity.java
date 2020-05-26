@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 public class PhytagorasActivity extends AppCompatActivity {
 
     EditText num1, num2;
@@ -45,18 +47,23 @@ public class PhytagorasActivity extends AppCompatActivity {
             return;
         }
 
+        if(number1 == 0 || number2 == 0 ){
+            String result = "Length must be greater than zero";
+            Result.setText(result);
+            return;
+        }
 
         if(number1 > number2){
             double c = number1;
             double b = number2;
             double power = (c*c)-(b*b);
             double res = Math.sqrt(power);
-            String result = "A = " + Double.toString(res);
+            DecimalFormat df = new DecimalFormat("0.00");
+            String result = "A = " + df.format(res);
             Result.setText(result);
             double area = (res*b)/2;
             double perimeter = res+b+c;
-            String attribute = "    Triangle Attribute :\n    Area           = "
-                    + area + "\n    Perimeter = " + perimeter;
+            String attribute = "    Triangle Attribute :\n    Area           = " + df.format(area) + "\n    Perimeter  = " + df.format(perimeter);
             triangleAtt.setText(attribute);
 
         }else if (number1 < number2){
@@ -64,12 +71,12 @@ public class PhytagorasActivity extends AppCompatActivity {
             double c = number2;
             double power = (c*c)-(b*b);
             double res = Math.sqrt(power);
-            String result = "A = " + Double.toString(res);
+            DecimalFormat df = new DecimalFormat("0.00");
+            String result = "A = " + df.format(res);
             Result.setText(result);
             double area = (res*b)/2;
             double perimeter = res+b+c;
-            String attribute = "    Triangle Attribute :\n    Area           = "
-                    + area + "\n    Perimeter = " + perimeter;
+            String attribute = "    Triangle Attribute :\n    Area           = " + df.format(area) + "\n    Perimeter  = " + df.format(perimeter);
             triangleAtt.setText(attribute);
 
         }else {
@@ -91,29 +98,35 @@ public class PhytagorasActivity extends AppCompatActivity {
             return;
         }
 
+        if(number1 == 0 || number2 == 0 ){
+            String result = "Length must be greater than zero";
+            Result.setText(result);
+            return;
+        }
+
         if(number1 > number2){
             double c = number1;
             double a = number2;
             double power = (c*c)-(a*a);
             double res = Math.sqrt(power);
-            String result = "B = " + Double.toString(res);
+            DecimalFormat df = new DecimalFormat("0.00");
+            String result = "B = " + df.format(res);
             Result.setText(result);
             double area = (res*a)/2;
             double perimeter = res+a+c;
-            String attribute = "    Triangle Attribute :\n    Area           = "
-                    + area + "\n    Perimeter = " + perimeter;
+            String attribute = "    Triangle Attribute :\n    Area           = " + df.format(area) + "\n    Perimeter  = " + df.format(perimeter);
             triangleAtt.setText(attribute);
         }else if (number1 < number2){
             double a = number1;
             double c = number2;
             double power = (c*c)-(a*a);
             double res = Math.sqrt(power);
-            String result = "B = " + Double.toString(res);
+            DecimalFormat df = new DecimalFormat("0.00");
+            String result = "B = " + df.format(res);
             Result.setText(result);
             double area = (a*res)/2;
             double perimeter = a+res+c;
-            String attribute = "    Triangle Attribute :\n    Area           = "
-                    + area + "\n    Perimeter = " + perimeter;
+            String attribute = "    Triangle Attribute :\n    Area           = " + df.format(area) + "\n    Perimeter  = " + df.format(perimeter);
             triangleAtt.setText(attribute);
         }else {
             String result = "Number cannot be the same";
@@ -134,17 +147,22 @@ public class PhytagorasActivity extends AppCompatActivity {
             return;
         }
 
+        if(number1 == 0 || number2 == 0 ){
+            String result = "Length must be greater than zero";
+            Result.setText(result);
+            return;
+        }
 
             double a = number1;
             double b = number2;
             double power = (a*a)+(b*b);
             double res = Math.sqrt(power);
-            String result = "C = " + Double.toString(res);
+            DecimalFormat df = new DecimalFormat("0.00");
+            String result = "C = " + df.format(res);
             Result.setText(result);
             double area = (a*b)/2;
             double perimeter = a+b+res;
-            String attribute = "    Triangle Attribute :\n    Area           = " + area
-                    + "\n    Perimeter = " + perimeter;
+            String attribute = "    Triangle Attribute :\n    Area           = " + df.format(area) + "\n    Perimeter  = " + df.format(perimeter);
             triangleAtt.setText(attribute);
 
     }
