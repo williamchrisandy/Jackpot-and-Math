@@ -54,7 +54,7 @@
         android:textColor="@android:color/black"
         android:textSize="20sp"
         android:textStyle="italic"
-        android:text="f(x) = ax^2 + bx + c"
+        android:text="f(x) = ax&#x00B2; + bx + c"
     />
 
     <EditText
