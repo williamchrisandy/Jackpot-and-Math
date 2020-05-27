@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.inputmethodservice.Keyboard;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -28,11 +30,6 @@ public class RandomActivity extends AppCompatActivity {
         stop = findViewById(R.id.inputStop);
         result = findViewById(R.id.result);
         result.setTextColor(Color.parseColor("#FF0000"));
-    }
-
-    public void toHome(View view){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
     }
 
     public void generate(View view){
@@ -64,9 +61,13 @@ public class RandomActivity extends AppCompatActivity {
 
         temp = (int)(Math.random() * (sStop-sStart+1) + sStart);
 
-        sResult = sName + temp;
-        result.setText(sResult);
+        sResult = "Hello " + sName + temp;
 
+        String username = sResult;
+
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("username",username);
+        startActivity(intent);
     }
 
 }

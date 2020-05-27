@@ -11,61 +11,57 @@
         android:layout_marginTop="50dp"
         android:layout_weight="1">
         <TextView
+            android:id="@+id/mainTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Welcome to M-OOP Final Project"
             android:textAlignment="center"
             android:textSize="30sp"
+            android:textColor="@android:color/black"
             />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Please choose your options:"
+            android:text="@string/please_choose_your_options"
             android:textAlignment="center"
             android:textSize="30sp"
+            android:textColor="@android:color/black"
             />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_weight="2"
-        android:gravity="center_horizontal">
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
         <Button
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="Concatenator"
-            android:onClick="toRandom"/>
-
-        <Button
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:text="Phytagoras Calculator"
             android:layout_marginTop="10dp"
-            android:onClick="toPhytagoras"/>
+            android:onClick="toPhytagoras"
+            android:text="@string/phytagoras_calculator" />
 
         <Button
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="Quadratic Factor Calculator"
             android:layout_marginTop="10dp"
-            android:onClick="toQuadratic"/>
+            android:onClick="toQuadratic"
+            android:text="@string/quadratic_factor_calculator" />
 
         <Button
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="Tube Calculator"
             android:layout_marginTop="10dp"
-            android:onClick="toTube"/>
+            android:onClick="toTube"
+            android:text="@string/tube_calculator" />
 
         <Button
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="Jackpot GBK"
             android:layout_marginTop="10dp"
-            android:onClick="toJackpotGBK"/>
+            android:onClick="toJackpotGBK"
+            android:text="@string/jackpot_gbk" />
 
     </LinearLayout>
 

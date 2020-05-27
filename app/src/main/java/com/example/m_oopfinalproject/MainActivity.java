@@ -5,21 +5,27 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-
-
+import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
+
+    TextView title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
 
-    public void toRandom(View view) {
-        Intent intent = new Intent(this, RandomActivity.class);
-        startActivity(intent);
+        Intent intent = getIntent();
+        String name = intent.getStringExtra("username");
+        title = findViewById(R.id.mainTitle);
+        title.setText(name);
+    }
+    @Override
+    public void onBackPressed()
+    {
+
     }
     public void toPhytagoras(View view) {
         Intent intent = new Intent(this, PhytagorasActivity.class);
