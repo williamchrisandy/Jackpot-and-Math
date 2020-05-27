@@ -143,7 +143,6 @@
         android:layout_marginRight="10sp"
         android:textColor="@android:color/black"
         android:textSize="20sp"
-        android:hint="Result will be showed here"
     />
 
 </RelativeLayout>
