@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.inputmethodservice.Keyboard;
 import android.os.Bundle;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -62,10 +63,11 @@ public class RandomActivity extends AppCompatActivity {
         sResult = "Hello " + sName + temp;
 
         String username = sResult;
-
+        PreferenceManager.getDefaultSharedPreferences(this).edit().putString("KEY_NAME", String.valueOf(username)).apply();
         Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra("username", username);
         startActivity(intent);
+        finish();
     }
 
 }

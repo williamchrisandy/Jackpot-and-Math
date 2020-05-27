@@ -2,8 +2,11 @@ package com.example.m_oopfinalproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,14 +21,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Intent intent = getIntent();
-        String name = intent.getStringExtra("username");
+//        Intent intent = getIntent();
+//        String name = getIntent().getStringExtra("KEY_NAME"); //cannot use intent because name won't be saved
+
+        SharedPreferences save = PreferenceManager.getDefaultSharedPreferences(this);
+        String name = save.getString("KEY_NAME", "NoName");
+
         title = findViewById(R.id.mainTitle);
         title.setText(name);
     }
     @Override
     public void onBackPressed(){
-        Toast.makeText(getApplicationContext(),"Can't go back to previous page!",Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"App Terminated",Toast.LENGTH_SHORT).show();
+        finish();
     }
     public void toPhytagoras(View view) {
         Intent intent = new Intent(this, PhytagorasActivity.class);
