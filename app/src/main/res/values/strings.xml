@@ -4,10 +4,16 @@
     <string name="jackpotgbk_button_stop">Stop</string>
 
     <string name="back">Back</string>
-    <string name="name_and_random_number_concatenator">Name and Random Number Concatenator</string>
+    <string name="generate_username">Please generate a username</string>
     <string name="enter_your_name">Enter Your Name</string>
     <string name="enter_start_number">Enter Start Number</string>
     <string name="enter_stop_number">Enter Stop Number</string>
     <string name="generate">Generate</string>
+    <string name="please_choose_your_options">Please choose your options:</string>
+    <string name="phytagoras_calculator">Phytagoras Calculator</string>
+    <string name="quadratic_factor_calculator">Quadratic Factor Calculator</string>
+    <string name="tube_calculator">Tube Calculator</string>
+    <string name="jackpot_gbk">Jackpot GBK</string>
+    <string name="exit">Exit</string>
 
 </resources>

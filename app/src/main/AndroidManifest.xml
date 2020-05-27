@@ -15,22 +15,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".JackpotGBKActivity">
-            android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
 
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data android:scheme="jackpotgbk" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".Tube_calculatorActivitv2" />
         <activity android:name=".RandomActivity" />
         <activity android:name=".PhytagorasActivity" />
         <activity android:name=".QuadraticActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".JackpotGBKActivity"
+            android:screenOrientation="nosensor">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="jackpotgbk" />
+            </intent-filter>
         </activity>
     </application>
 
