@@ -10,6 +10,7 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -29,7 +30,6 @@ public class RandomActivity extends AppCompatActivity {
         start = findViewById(R.id.inputStart);
         stop = findViewById(R.id.inputStop);
         result = findViewById(R.id.result);
-        result.setTextColor(Color.parseColor("#FF0000"));
     }
 
     public void generate(View view){
@@ -41,21 +41,19 @@ public class RandomActivity extends AppCompatActivity {
 
         sName = name.getText().toString();
         if(sName.equals("")){
-            sResult = "Input Name!";
-            result.setText(sResult);
+            Toast.makeText(getApplicationContext(),"Name must be entered!",Toast.LENGTH_SHORT).show();
             return;
         }
         try {
             sStart = Integer.parseInt(start.getText().toString());
             sStop = Integer.parseInt(stop.getText().toString());
         }catch(Exception e){
-            sResult = "Input Number Range!";
-            result.setText(sResult);
+            Toast.makeText(getApplicationContext(),"Input number range!",Toast.LENGTH_SHORT).show();
+
             return;
         }
         if(sStart>sStop){
-            sResult = "Start range must be smaller than stop range!";
-            result.setText(sResult);
+            Toast.makeText(getApplicationContext(),"Start range must be smaller than stop range!",Toast.LENGTH_LONG).show();
             return;
         }
 
@@ -66,7 +64,7 @@ public class RandomActivity extends AppCompatActivity {
         String username = sResult;
 
         Intent intent = new Intent(this, MainActivity.class);
-        intent.putExtra("username",username);
+        intent.putExtra("username", username);
         startActivity(intent);
     }
 

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -23,9 +24,8 @@ public class MainActivity extends AppCompatActivity {
         title.setText(name);
     }
     @Override
-    public void onBackPressed()
-    {
-
+    public void onBackPressed(){
+        Toast.makeText(getApplicationContext(),"Can't go back to previous page!",Toast.LENGTH_SHORT).show();
     }
     public void toPhytagoras(View view) {
         Intent intent = new Intent(this, PhytagorasActivity.class);
