@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.DecimalFormat;
 
@@ -42,14 +43,12 @@ public class PhytagorasActivity extends AppCompatActivity {
              number1 = Double.parseDouble(num1.getText().toString());
              number2 = Double.parseDouble(num2.getText().toString());
         }catch (Exception e){
-            String result = "Must input a number";
-            Result.setText(result);
+            Toast.makeText(getApplicationContext(),"Must input a number",Toast.LENGTH_SHORT).show();
             return;
         }
 
         if(number1 == 0 || number2 == 0 ){
-            String result = "Length must be greater than zero";
-            Result.setText(result);
+            Toast.makeText(getApplicationContext(),"Length must be greater than zero",Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -80,8 +79,7 @@ public class PhytagorasActivity extends AppCompatActivity {
             triangleAtt.setText(attribute);
 
         }else {
-            String result = "Number cannot be the same";
-            Result.setText(result);
+            Toast.makeText(getApplicationContext(),"Number cannot be the same",Toast.LENGTH_SHORT).show();
         }
 
     }
@@ -93,14 +91,12 @@ public class PhytagorasActivity extends AppCompatActivity {
             number1 = Double.parseDouble(num1.getText().toString());
             number2 = Double.parseDouble(num2.getText().toString());
         }catch (Exception e){
-            String result = "Must input a number";
-            Result.setText(result);
+            Toast.makeText(getApplicationContext(),"Must input a number",Toast.LENGTH_SHORT).show();
             return;
         }
 
         if(number1 == 0 || number2 == 0 ){
-            String result = "Length must be greater than zero";
-            Result.setText(result);
+            Toast.makeText(getApplicationContext(),"Length must be greater than zero",Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -129,8 +125,7 @@ public class PhytagorasActivity extends AppCompatActivity {
             String attribute = "    Triangle Attribute :\n    Area           = " + df.format(area) + "\n    Perimeter  = " + df.format(perimeter);
             triangleAtt.setText(attribute);
         }else {
-            String result = "Number cannot be the same";
-            Result.setText(result);
+            Toast.makeText(getApplicationContext(),"Number cannot be the same",Toast.LENGTH_SHORT).show();
         }
 
     }
@@ -142,14 +137,12 @@ public class PhytagorasActivity extends AppCompatActivity {
             number1 = Double.parseDouble(num1.getText().toString());
             number2 = Double.parseDouble(num2.getText().toString());
         }catch (Exception e){
-            String result = "Must input a number";
-            Result.setText(result);
+            Toast.makeText(getApplicationContext(),"Must input a number",Toast.LENGTH_SHORT).show();
             return;
         }
 
         if(number1 == 0 || number2 == 0 ){
-            String result = "Length must be greater than zero";
-            Result.setText(result);
+            Toast.makeText(getApplicationContext(),"Length must be greater than zero",Toast.LENGTH_SHORT).show();
             return;
         }
 
