@@ -38,18 +38,22 @@ public class MainActivity extends AppCompatActivity {
     public void toPhytagoras(View view) {
         Intent intent = new Intent(this, PhytagorasActivity.class);
         startActivity(intent);
+        finish();
     }
     public void toQuadratic(View view) {
         Intent intent = new Intent(this, QuadraticActivity.class);
         startActivity(intent);
+        finish();
     }
     public void toTube(View view) {
         Intent intent = new Intent(this, Tube_calculatorActivitv2.class);
         startActivity(intent);
+        finish();
     }
     public void toJackpotGBK(View view) {
         Intent intent = new Intent(this, JackpotGBKActivity.class);
         startActivity(intent);
+        finish();
     }
 
 }

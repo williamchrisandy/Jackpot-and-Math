@@ -59,7 +59,7 @@
             android:id="@+id/num1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Input num 1"
+            android:hint="Input 1nd number"
             android:inputType="number"
             android:layout_marginRight="20dp"
             />
@@ -68,7 +68,7 @@
             android:id="@+id/num2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Input num 2"
+            android:hint="Input 2nd number"
             android:inputType="number"
             android:layout_marginLeft="20dp"
             />

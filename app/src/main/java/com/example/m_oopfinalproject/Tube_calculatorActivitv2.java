@@ -30,6 +30,10 @@ public class Tube_calculatorActivitv2 extends AppCompatActivity {
     public  void  backButton (View view){
         Intent intentBack = new Intent(this, MainActivity.class);
         startActivity(intentBack);
+        finish();
+    }
+    public void onBackPressed(){
+        finish();
     }
 
     public  void  calculate (View view){

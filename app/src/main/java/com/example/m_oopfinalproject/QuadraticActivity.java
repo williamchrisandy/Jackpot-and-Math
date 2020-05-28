@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.DecimalFormat;
 
@@ -27,10 +28,15 @@ public class QuadraticActivity extends AppCompatActivity
         result = findViewById(R.id.q2fc_calculate_result_output);
     }
 
+    public void onBackPressed(){
+        finish();
+    }
+
     public void q2fcBack(View view)
     {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        finish();
     }
 
     private String q2fcQuadraticCalculate(double a, double b, double c)

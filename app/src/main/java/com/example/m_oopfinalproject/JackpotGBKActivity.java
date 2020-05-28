@@ -19,6 +19,10 @@ public class JackpotGBKActivity extends AppCompatActivity {
 
     // For more information on how this game works, see https://reinhart1010.github.io/jackpotgbk/
 
+    public void onBackPressed(){
+        finish();
+    }
+
     // Set 2 players
     public JackpotGBKPlayer[] players = new JackpotGBKPlayer[2];
 

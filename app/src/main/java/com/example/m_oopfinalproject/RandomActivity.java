@@ -50,7 +50,6 @@ public class RandomActivity extends AppCompatActivity {
             sStop = Integer.parseInt(stop.getText().toString());
         }catch(Exception e){
             Toast.makeText(getApplicationContext(),"Input number range!",Toast.LENGTH_SHORT).show();
-
             return;
         }
         if(sStart>sStop){
