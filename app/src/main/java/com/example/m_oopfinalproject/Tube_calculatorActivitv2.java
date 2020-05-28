@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.DecimalFormat;
 
@@ -41,8 +42,10 @@ public class Tube_calculatorActivitv2 extends AppCompatActivity {
             radius = Float.parseFloat(txtRadius.getText().toString());
 
         }catch (Exception e){
-            text = "Please input number";
-            txtResult.setText(text);
+//            text = "Please input number";
+//            txtResult.setText(text);
+//            return;
+            Toast.makeText(getApplicationContext(),"Please input number",Toast.LENGTH_SHORT).show();
             return;
         }
 

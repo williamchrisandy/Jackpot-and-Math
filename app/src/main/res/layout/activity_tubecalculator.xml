@@ -31,6 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Input Height (cm)"
+            android:textAlignment="center"
             android:textSize="23sp"
             android:layout_marginTop="40px"
             android:inputType="number"/>
@@ -40,6 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Input Radius (cm)"
+            android:textAlignment="center"
             android:textSize="23sp"
             android:layout_marginTop="40px"
             android:inputType="number"/>
