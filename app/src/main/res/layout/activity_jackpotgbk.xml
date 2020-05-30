@@ -9,89 +9,108 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
-        <LinearLayout
-            android:id="@+id/player1"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="1dp">
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:theme="@style/ActionBarTheme"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/player1_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Player 1"
-                android:textSize="36sp"
-                android:textAlignment="center"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/player1_score"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="96sp"
-                android:textAlignment="center"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/player1_list"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scrollHorizontally="false"
-                android:textAlignment="center"
-                android:textSize="36sp" />
-
-            <Button
-                android:id="@+id/player1_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="toggleSlot"
-                android:text="@string/jackpotgbk_button_start" />
-        </LinearLayout>
         <LinearLayout
-            android:id="@+id/player2"
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="match_parent"
             android:orientation="vertical"
-            tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="1dp">
-            <TextView
-                android:id="@+id/player2_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Player 2"
-                android:textSize="36sp"
-                android:textAlignment="center"
-                android:textStyle="bold" />
+            tools:layout_editor_absoluteX="1dp">
 
-            <TextView
-                android:id="@+id/player2_score"
+            <LinearLayout
+                android:id="@+id/player1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="96sp"
-                android:textAlignment="center"
-                android:text="0" />
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="1dp"
+                tools:layout_editor_absoluteY="1dp">
 
-            <TextView
-                android:id="@+id/player2_list"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scrollHorizontally="false"
-                android:textAlignment="center"
-                android:textSize="36sp" />
+                <TextView
+                    android:id="@+id/player1_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Player 1"
+                    android:textAlignment="center"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/player2_button"
+                <TextView
+                    android:id="@+id/player1_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textSize="96sp" />
+
+                <TextView
+                    android:id="@+id/player1_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollHorizontally="false"
+                    android:textAlignment="center"
+                    android:textSize="36sp" />
+
+                <Button
+                    android:id="@+id/player1_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="toggleSlot"
+                    android:text="@string/jackpotgbk_button_start" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/player2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="toggleSlot"
-                android:text="@string/jackpotgbk_button_start" />
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="1dp"
+                tools:layout_editor_absoluteY="1dp">
+
+                <TextView
+                    android:id="@+id/player2_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Player 2"
+                    android:textAlignment="center"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/player2_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textSize="96sp" />
+
+                <TextView
+                    android:id="@+id/player2_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollHorizontally="false"
+                    android:textAlignment="center"
+                    android:textSize="36sp" />
+
+                <Button
+                    android:id="@+id/player2_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="toggleSlot"
+                    android:text="@string/jackpotgbk_button_start" />
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
