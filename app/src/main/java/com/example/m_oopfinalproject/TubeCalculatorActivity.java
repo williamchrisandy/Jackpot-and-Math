@@ -3,6 +3,7 @@ package com.example.m_oopfinalproject;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -11,7 +12,7 @@ import android.widget.Toast;
 
 import java.text.DecimalFormat;
 
-public class Tube_calculatorActivitv2 extends AppCompatActivity {
+public class TubeCalculatorActivity extends AppCompatActivity {
 
     EditText txtHeight;
     EditText txtRadius;
@@ -24,7 +25,7 @@ public class Tube_calculatorActivitv2 extends AppCompatActivity {
         txtHeight = findViewById(R.id.txtHeight);
         txtRadius = findViewById(R.id.txtRadius);
         txtResult = findViewById(R.id.txtResult);
-
+        txtResult.setTextColor(Color.parseColor("#000000"));
     }
 
     public  void  backButton (View view){
@@ -33,11 +34,12 @@ public class Tube_calculatorActivitv2 extends AppCompatActivity {
         finish();
     }
     public void onBackPressed(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
         finish();
     }
 
     public  void  calculate (View view){
-        String text;
         float height = 0;
         float radius = 0;
 
@@ -46,20 +48,12 @@ public class Tube_calculatorActivitv2 extends AppCompatActivity {
             radius = Float.parseFloat(txtRadius.getText().toString());
 
         }catch (Exception e){
-//            text = "Please input number";
-//            txtResult.setText(text);
-//            return;
             Toast.makeText(getApplicationContext(),"Please input number",Toast.LENGTH_SHORT).show();
             return;
         }
 
-
-
-
         double hasil = (double) (Math.PI * radius * radius* height);
         DecimalFormat df = new DecimalFormat("0.00");
-
-
 
         String jawaban = "" + df.format(hasil)+ " cm^3";
         txtResult.setText(jawaban);

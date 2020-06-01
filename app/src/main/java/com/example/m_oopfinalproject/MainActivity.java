@@ -2,7 +2,6 @@ package com.example.m_oopfinalproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -46,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
     public void toTube(View view) {
-        Intent intent = new Intent(this, Tube_calculatorActivitv2.class);
+        Intent intent = new Intent(this, TubeCalculatorActivity.class);
         startActivity(intent);
         finish();
     }

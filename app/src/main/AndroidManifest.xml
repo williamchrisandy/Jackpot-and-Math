@@ -17,7 +17,7 @@
         </activity>
 
         <activity android:name=".MainActivity" />
-        <activity android:name=".Tube_calculatorActivitv2" />
+        <activity android:name=".TubeCalculatorActivity" />
         <activity android:name=".RandomActivity" />
         <activity android:name=".PhytagorasActivity" />
         <activity android:name=".QuadraticActivity" />

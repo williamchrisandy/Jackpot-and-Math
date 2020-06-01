@@ -2,6 +2,7 @@ package com.example.m_oopfinalproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Html;
@@ -20,6 +21,8 @@ public class JackpotGBKActivity extends AppCompatActivity {
     // For more information on how this game works, see https://reinhart1010.github.io/jackpotgbk/
 
     public void onBackPressed(){
+        Intent intentBack = new Intent(this, MainActivity.class);
+        startActivity(intentBack);
         finish();
     }
 

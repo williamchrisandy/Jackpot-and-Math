@@ -33,6 +33,10 @@ public class RandomActivity extends AppCompatActivity {
         result = findViewById(R.id.result);
     }
 
+    public void onBackPressed(){
+        finish();
+    }
+
     public void generate(View view){
         String sName;
         int temp;

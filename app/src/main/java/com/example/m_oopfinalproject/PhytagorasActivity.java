@@ -36,6 +36,8 @@ public class PhytagorasActivity extends AppCompatActivity {
         finish();
     }
     public void onBackPressed(){
+        Intent intentBack = new Intent(this, MainActivity.class);
+        startActivity(intentBack);
         finish();
     }
 
