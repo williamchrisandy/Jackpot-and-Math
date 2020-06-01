@@ -1,11 +1,16 @@
 package com.example.m_oopfinalproject;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Html;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
@@ -43,17 +48,21 @@ public class JackpotGBKActivity extends AppCompatActivity {
     private Runnable player1Updater = new Runnable(){
         @Override
         public void run(){
-            if (player1RemainingSlots >= 0) {
-                player1Slot[2 - player1RemainingSlots] = randomChars[(int) (Math.random() * 3)];
-                updateSlotViews(1);
-                player1Handler.postDelayed(this, 200);
-            } else {
-                player1RemainingSlots = 3;
-                checkOutSlot(player1Slot, players[0]);
-                checkOutMoves();
-                player1Slot[0] = player1Slot[1] = player1Slot[2] = 'n';
-                updateViews();
-            }
+        if (player1RemainingSlots >= 0) {
+            char temp;
+            do {
+                temp = randomChars[(int) (Math.random() * 3)];
+            } while (temp == player1Slot[2 - player1RemainingSlots]);
+            player1Slot[2 - player1RemainingSlots] = temp;
+            updateSlotViews(1);
+            player1Handler.postDelayed(this, 200);
+        } else {
+            player1RemainingSlots = 3;
+            checkOutSlot(player1Slot, players[0]);
+            checkOutMoves();
+            player1Slot[0] = player1Slot[1] = player1Slot[2] = 'n';
+            updateViews();
+        }
         }
     };
 
@@ -61,26 +70,59 @@ public class JackpotGBKActivity extends AppCompatActivity {
     private Runnable player2Updater = new Runnable(){
         @Override
         public void run(){
-            if (player2RemainingSlots >= 0) {
-                player2Slot[2 - player2RemainingSlots] = randomChars[(int) (Math.random() * 3)];
-                updateSlotViews(2);
-                player2Handler.postDelayed(this, 200);
-            } else {
-                player2RemainingSlots = 3;
-                checkOutSlot(player2Slot, players[1]);
-                checkOutMoves();
-                player2Slot[0] = player2Slot[1] = player2Slot[2] = 'n';
-                updateViews();
-            }
+        if (player2RemainingSlots >= 0) {
+            char temp;
+            do {
+                temp = randomChars[(int) (Math.random() * 3)];
+            } while (temp == player2Slot[2 - player2RemainingSlots]);
+            player2Slot[2 - player2RemainingSlots] = temp;
+            updateSlotViews(2);
+            player2Handler.postDelayed(this, 200);
+        } else {
+            player2RemainingSlots = 3;
+            checkOutSlot(player2Slot, players[1]);
+            checkOutMoves();
+            player2Slot[0] = player2Slot[1] = player2Slot[2] = 'n';
+            updateViews();
+        }
         }
     };
 
+    // Override activity instantiation method
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jackpotgbk);
+
+        // Set custom toolbar
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(myToolbar);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
+        // Initialize players
         players[0] = new JackpotGBKPlayer("Player 1");
         players[1] = new JackpotGBKPlayer("Player 2");
+    }
+
+    // Override ActionBar behaviors
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_jackpotgbk, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+            case R.id.about_jackpotgbk:
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     // Convert movement states to emojis
