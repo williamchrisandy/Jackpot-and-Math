@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:onClick="toJackpotGBK"
-            android:text="@string/jackpot_gbk" />
+            android:text="@string/jackpotgbk_title" />
 
     </LinearLayout>
 

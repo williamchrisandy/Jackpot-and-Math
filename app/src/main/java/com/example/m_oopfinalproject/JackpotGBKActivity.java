@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Html;
@@ -12,10 +13,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class JackpotGBKActivity extends AppCompatActivity {
     // This is a Java port of "Jackpot GBK" (https://github.com/reinhart1010/jackpotgbk/) web game,
@@ -43,6 +42,9 @@ public class JackpotGBKActivity extends AppCompatActivity {
     // Handler utilities
     private Handler player1Handler = new Handler();
     private Handler player2Handler = new Handler();
+
+    // Handle LinearLayout for orientation changes
+    LinearLayout playerCanvas, player1Canvas, player2Canvas;
 
     // A Runnable for randomizing items in Player 1
     private Runnable player1Updater = new Runnable(){
@@ -95,10 +97,16 @@ public class JackpotGBKActivity extends AppCompatActivity {
         setContentView(R.layout.activity_jackpotgbk);
 
         // Set custom toolbar
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar myToolbar = findViewById(R.id.toolbar);
         setSupportActionBar(myToolbar);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
+
+        // Attach canvas
+        playerCanvas = findViewById(R.id.playerCanvas);
+        player1Canvas = findViewById(R.id.player1);
+        player2Canvas = findViewById(R.id.player2);
+        resolveOrientation();
 
         // Initialize players
         players[0] = new JackpotGBKPlayer("Player 1");
@@ -119,10 +127,37 @@ public class JackpotGBKActivity extends AppCompatActivity {
                 onBackPressed();
                 return true;
             case R.id.about_jackpotgbk:
+                startActivity(new Intent(this, JackpotGBKHelp.class));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    // Make it compatible for horizontal mode
+    private void resolveOrientation(){
+        Configuration newConfig = getResources().getConfiguration();
+        // Checks the orientation of the screen
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            playerCanvas.setOrientation(LinearLayout.HORIZONTAL);
+            player1Canvas.getLayoutParams().height = LinearLayout.LayoutParams.MATCH_PARENT;
+            player1Canvas.getLayoutParams().width = 0;
+            player2Canvas.getLayoutParams().height = LinearLayout.LayoutParams.MATCH_PARENT;
+            player2Canvas.getLayoutParams().width = 0;
+        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
+            playerCanvas.setOrientation(LinearLayout.VERTICAL);
+            player1Canvas.getLayoutParams().width = LinearLayout.LayoutParams.MATCH_PARENT;
+            player1Canvas.getLayoutParams().height = 0;
+            player2Canvas.getLayoutParams().width = LinearLayout.LayoutParams.MATCH_PARENT;
+            player2Canvas.getLayoutParams().height = 0;
+        }
+    }
+
+    // Make sure the above method is trigger on orientation change
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        resolveOrientation();
     }
 
     // Convert movement states to emojis

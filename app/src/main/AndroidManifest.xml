@@ -9,25 +9,31 @@
         android:roundIcon="@drawable/icon144"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <activity android:name=".JackpotGBKHelp"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".MainActivity" />
         <activity android:name=".TubeCalculatorActivity" />
         <activity android:name=".RandomActivity" />
         <activity android:name=".PhytagorasActivity" />
         <activity android:name=".QuadraticActivity" />
-        <activity android:name=".JackpotGBKActivity"
-            android:screenOrientation="nosensor"
-            android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name=".JackpotGBKActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|screenSize" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data android:scheme="jackpotgbk" />
             </intent-filter>
         </activity>

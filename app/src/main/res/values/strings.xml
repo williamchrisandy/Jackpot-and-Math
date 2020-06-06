@@ -13,7 +13,7 @@
     <string name="phytagoras_calculator">Phytagoras Calculator</string>
     <string name="quadratic_factor_calculator">Quadratic Factor Calculator</string>
     <string name="tube_calculator">Tube Calculator</string>
-    <string name="jackpot_gbk">Jackpot GBK</string>
+    <string name="jackpotgbk_title">Jackpot GBK</string>
     <string name="exit">Exit</string>
-
+    <string name="jackpotgbk_help">Jackpot GBK</string>
 </resources>
