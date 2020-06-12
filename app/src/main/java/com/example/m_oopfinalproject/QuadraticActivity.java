@@ -34,13 +34,6 @@ public class QuadraticActivity extends AppCompatActivity
         finish();
     }
 
-    public void q2fcBack(View view)
-    {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
-    }
-
     private String q2fcQuadraticCalculate(double a, double b, double c)
     {
         DecimalFormat decimalFormat = new DecimalFormat("#.##");

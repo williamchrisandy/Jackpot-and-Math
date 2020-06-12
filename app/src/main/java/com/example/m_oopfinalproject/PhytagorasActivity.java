@@ -30,11 +30,6 @@ public class PhytagorasActivity extends AppCompatActivity {
         triangleAtt.setTextColor(Color.parseColor("#000000"));
     }
 
-    public void backButton(View view){
-        Intent intentBack = new Intent(this, MainActivity.class);
-        startActivity(intentBack);
-        finish();
-    }
     public void onBackPressed(){
         Intent intentBack = new Intent(this, MainActivity.class);
         startActivity(intentBack);

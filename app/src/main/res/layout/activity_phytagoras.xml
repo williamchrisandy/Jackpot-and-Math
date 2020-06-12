@@ -8,14 +8,6 @@
     android:orientation="vertical"
     >
 
-    <Button
-        android:id="@+id/backBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back"
-        android:onClick="backButton"
-        />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="30dp" />
@@ -62,6 +54,7 @@
             android:hint="Input 1st number"
             android:inputType="number"
             android:layout_marginRight="20dp"
+            android:textAlignment="center"
             />
 
         <EditText
@@ -71,6 +64,7 @@
             android:hint="Input 2nd number"
             android:inputType="number"
             android:layout_marginLeft="20dp"
+            android:textAlignment="center"
             />
 
 
@@ -106,6 +100,7 @@
             android:text="A"
             android:textSize="20sp"
             android:onClick="calculateA"
+            android:background="@drawable/custom_btn_options"
             />
 
         <Button
@@ -117,6 +112,7 @@
             android:layout_marginRight="20dp"
             android:textSize="20sp"
             android:onClick="calculateB"
+            android:background="@drawable/custom_btn_options"
             />
 
         <Button
@@ -126,6 +122,7 @@
             android:text="C"
             android:textSize="20sp"
             android:onClick="calculateC"
+            android:background="@drawable/custom_btn_options"
             />
 
     </LinearLayout>

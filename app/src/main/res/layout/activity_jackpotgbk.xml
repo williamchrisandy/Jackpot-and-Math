@@ -66,7 +66,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="toggleSlot"
-                    android:text="@string/jackpotgbk_button_start" />
+                    android:text="@string/jackpotgbk_button_start"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/custom_btn"/>
 
             </LinearLayout>
 
@@ -109,7 +113,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="toggleSlot"
-                    android:text="@string/jackpotgbk_button_start" />
+                    android:text="@string/jackpotgbk_button_start"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/custom_btn"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

@@ -28,11 +28,6 @@ public class TubeCalculatorActivity extends AppCompatActivity {
         txtResult.setTextColor(Color.parseColor("#000000"));
     }
 
-    public  void  backButton (View view){
-        Intent intentBack = new Intent(this, MainActivity.class);
-        startActivity(intentBack);
-        finish();
-    }
     public void onBackPressed(){
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);

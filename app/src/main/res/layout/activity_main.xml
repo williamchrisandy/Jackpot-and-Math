@@ -40,27 +40,35 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:onClick="toPhytagoras"
+            android:background="@drawable/custom_btn"
+            android:textColor="@android:color/white"
             android:text="@string/phytagoras_calculator" />
 
         <Button
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:onClick="toQuadratic"
+            android:background="@drawable/custom_btn"
+            android:textColor="@android:color/white"
             android:text="@string/quadratic_factor_calculator" />
 
         <Button
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:onClick="toTube"
+            android:background="@drawable/custom_btn"
+            android:textColor="@android:color/white"
             android:text="@string/tube_calculator" />
 
         <Button
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:onClick="toJackpotGBK"
+            android:background="@drawable/custom_btn"
+            android:textColor="@android:color/white"
             android:text="@string/jackpotgbk_title" />
 
     </LinearLayout>
