@@ -16,4 +16,12 @@
     <string name="jackpotgbk_title">Jackpot GBK</string>
     <string name="exit">Exit</string>
     <string name="jackpotgbk_help">Jackpot GBK</string>
+    <string name="pythagoras_calculator">Pythagoras Calculator</string>
+    <string name="pc">(PC)</string>
+    <string name="input_1st_number">Input 1st number</string>
+    <string name="input_2nd_number">Input 2nd number</string>
+    <string name="look_for">Look for :</string>
+    <string name="a">A</string>
+    <string name="b">B</string>
+    <string name="c">C</string>
 </resources>
